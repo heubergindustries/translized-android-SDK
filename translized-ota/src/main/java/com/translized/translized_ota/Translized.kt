@@ -52,6 +52,14 @@ public object Translized {
         }
     }
 
+	public fun getText(id: String): String? {
+		return repository.getText(id)
+	}
+
+	public fun getPlural(id: String): String? {
+		return repository.getPlural(id)
+	}
+
     public fun updateTranslations() {
         check(isInitialized) { "Not initialized. Call `Translized.init(context)` from your Application." }
         val requestCheckOta = getCheckOtaRequest() ?: return
